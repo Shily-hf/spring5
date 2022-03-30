@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:uitl="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--集合类型属性注入-->
+    <uitl:list id="bookList">
+        <value>大大</value>
+        <value>小小</value>
+        <value>中中</value>
+    </uitl:list>
+
+    <!--scope属性值：singleton 单例模式，在加载配置文件的时候就加载到内存中
+                    prototype 多实例模式，在调用getBean方法的时候创建多例对象-->
+    <bean id="book" class="edu.shily.spring5.collectiontype.Book" scope="prototype">
+        <property name="list" ref="bookList"></property>
+    </bean>
+</beans>

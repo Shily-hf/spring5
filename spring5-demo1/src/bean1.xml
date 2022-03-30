@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1.配置User对象创建-->
+    <!--此处的id类似与标签-->
+    <bean id="user" class="edu.shily.spring5.User"></bean>
+
+    <!--2 set方法注入属性-->
+    <bean id="book" class="edu.shily.spring5.Book">
+        <!--使用property标签完成注入属性
+            name:类里面属性名称
+            value:向属性注入值
+        -->
+        <property name="bname" value="如何让富婆爱上你"></property>
+        <property name="bauthor" value="小白"></property>
+
+        <!--赋予null值-->
+        <!--<property name="address">
+            <null/>
+        </property>-->
+
+        <!--属性值包含特殊符号
+        1.&lt;&gt;
+        2.把特殊符号内容写到CDATA
+        -->
+        <property name="address">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
+
+    <!--3 有参数构造注入属性-->
+    <bean id="orders" class="edu.shily.spring5.Orders">
+        <constructor-arg name="oname" value="电脑"></constructor-arg>
+        <constructor-arg name="address" value="中国"></constructor-arg>
+    </bean>
+
+    <!--4 p名称空间注入（了解）-->
+    <!--<bean id="book" class="edu.shily.spring5.Book" p:bname="拉拉" p:bauthor="大大"></bean>-->
+</beans>

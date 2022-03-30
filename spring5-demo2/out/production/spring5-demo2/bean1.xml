@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="stu" class="edu.shily.spring5.collectiontype.Stu">
+        <!--数组类型注入-->
+        <property name="courses">
+           <array>
+               <value>java课程</value>
+               <value>数据库课程</value>
+           </array>
+        </property>
+
+        <!--list类型注入-->
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>李四</value>
+            </list>
+        </property>
+
+        <!--map类型注入-->
+        <property name="map">
+            <map>
+                <entry key="JAVA" value="java"></entry>
+                <entry key="PHP" value="php"></entry>
+            </map>
+        </property>
+
+        <!--set类型注入-->
+        <property name="set">
+            <set>
+                <value>MySQL</value>
+                <value>Redis</value>
+            </set>
+        </property>
+
+        <!--注入list集合类型，值是对象-->
+        <property name="courseList">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <!--创建多个course对象-->
+    <bean id="course1" class="edu.shily.spring5.collectiontype.Course">
+        <property name="cname" value="Spring5框架"></property>
+    </bean>
+
+    <bean id="course2" class="edu.shily.spring5.collectiontype.Course">
+        <property name="cname" value="MyBatis框架"></property>
+    </bean>
+</beans>

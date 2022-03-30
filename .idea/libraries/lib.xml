@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/spring-context-5.2.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/spring-beans-5.2.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/spring-expression-5.2.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/spring-core-5.2.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/spring5-demo4/lib/spring-aop-5.2.9.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

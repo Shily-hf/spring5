@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="spring-aop-5.2.9.RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/spring5-demo3/lib/spring-aop-5.2.9.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
